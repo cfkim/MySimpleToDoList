@@ -11,6 +11,7 @@
 		ACE72BB82CB85D4D0025E019 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE72BB72CB85D4D0025E019 /* ContentView.swift */; };
 		ACE72BBA2CB85D4F0025E019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE72BB92CB85D4F0025E019 /* Assets.xcassets */; };
 		ACE72BBD2CB85D4F0025E019 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE72BBC2CB85D4F0025E019 /* Preview Assets.xcassets */; };
+		ACE72BC42CB86A900025E019 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE72BC32CB86A900025E019 /* TaskItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		ACE72BB72CB85D4D0025E019 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ACE72BB92CB85D4F0025E019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACE72BBC2CB85D4F0025E019 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACE72BC32CB86A900025E019 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE72BB52CB85D4D0025E019 /* MySimpleToDoListApp.swift */,
+				ACE72BC32CB86A900025E019 /* TaskItemView.swift */,
 				ACE72BB72CB85D4D0025E019 /* ContentView.swift */,
 				ACE72BB92CB85D4F0025E019 /* Assets.xcassets */,
 				ACE72BBB2CB85D4F0025E019 /* Preview Content */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE72BC42CB86A900025E019 /* TaskItemView.swift in Sources */,
 				ACE72BB82CB85D4D0025E019 /* ContentView.swift in Sources */,
 				ACE72BB62CB85D4D0025E019 /* MySimpleToDoListApp.swift in Sources */,
 			);
