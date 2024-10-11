@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct TaskItemModel: Codable, Identifiable {
+    let id: String
+    let title: String
+    var isComplete: Bool
+    
+    mutating func setComplete(_ state: Bool) {
+        isComplete = state
+    }
+}

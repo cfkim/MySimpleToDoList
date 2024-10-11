@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class ContentViewViewModel: ObservableObject {
+    //let id: String
+    @Published var title: String = ""
+    
+    init() {
+    }
+    
+    func addTask(){
+        print("addTask")
+    }
+}

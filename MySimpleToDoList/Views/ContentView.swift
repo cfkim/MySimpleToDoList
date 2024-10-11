@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ContentViewViewModel()
+    
     var body: some View {
         NavigationView{
                 VStack (spacing: -50){
@@ -32,14 +34,27 @@ struct ContentView: View {
                     }
                     ZStack{
                         // Add Task Space
-                        Text("Add a New Task")
+                        TextField("", text: $viewModel.title, prompt: Text("Add New Task").foregroundColor(.black))
                             .bold()
+                            .zIndex(10)
+                            .font(.custom("", size: 20))
+                            .multilineTextAlignment(.center) // Center the text inside the TextField
+                            
                         Rectangle()
-                            .fill(.green.opacity(0.5))
+                            .fill(Color(red: 211 / 255, green: 254 / 255, blue: 202 / 255))
                             
                     }
+                    .onTapGesture {
+                        viewModel.addTask()
+                    }
                     .offset(y: 50)
-                }.navigationTitle("My To do List")
+                }.navigationTitle("My To do List").toolbar {
+                    Button {
+                        print("show profile sheet")
+                    } label: {
+                        Image(systemName: "person").tint(.gray).padding()
+                    }
+                }
         }
         
     }

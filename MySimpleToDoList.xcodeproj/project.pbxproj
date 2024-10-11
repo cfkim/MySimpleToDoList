@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0AFB902CB97F970052780F /* TaskItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AFB8F2CB97F960052780F /* TaskItemViewViewModel.swift */; };
+		AC0AFB922CB97FA50052780F /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AFB912CB97FA50052780F /* ContentViewViewModel.swift */; };
+		AC0AFB952CB982200052780F /* TaskItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AFB942CB982200052780F /* TaskItemModel.swift */; };
+		AC0AFB972CB98F040052780F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AFB962CB98F040052780F /* LoginView.swift */; };
+		AC0AFB992CB98F0D0052780F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AFB982CB98F0D0052780F /* RegisterView.swift */; };
+		AC0AFB9B2CB98F1F0052780F /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AFB9A2CB98F1F0052780F /* LoginViewViewModel.swift */; };
+		AC0AFB9D2CB98F310052780F /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AFB9C2CB98F310052780F /* RegisterViewViewModel.swift */; };
+		AC0AFB9F2CB98F3E0052780F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AFB9E2CB98F3E0052780F /* UserModel.swift */; };
+		AC0AFBA12CB99C1D0052780F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AFBA02CB99C1D0052780F /* ProfileView.swift */; };
+		AC0AFBA52CB99C440052780F /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AFBA42CB99C440052780F /* ProfileViewViewModel.swift */; };
 		ACE72BB62CB85D4D0025E019 /* MySimpleToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE72BB52CB85D4D0025E019 /* MySimpleToDoListApp.swift */; };
 		ACE72BB82CB85D4D0025E019 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE72BB72CB85D4D0025E019 /* ContentView.swift */; };
 		ACE72BBA2CB85D4F0025E019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE72BB92CB85D4F0025E019 /* Assets.xcassets */; };
@@ -15,6 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC0AFB8F2CB97F960052780F /* TaskItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemViewViewModel.swift; sourceTree = "<group>"; };
+		AC0AFB912CB97FA50052780F /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
+		AC0AFB942CB982200052780F /* TaskItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemModel.swift; sourceTree = "<group>"; };
+		AC0AFB962CB98F040052780F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AC0AFB982CB98F0D0052780F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		AC0AFB9A2CB98F1F0052780F /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
+		AC0AFB9C2CB98F310052780F /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
+		AC0AFB9E2CB98F3E0052780F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		AC0AFBA02CB99C1D0052780F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AC0AFBA42CB99C440052780F /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
 		ACE72BB22CB85D4D0025E019 /* MySimpleToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySimpleToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE72BB52CB85D4D0025E019 /* MySimpleToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySimpleToDoListApp.swift; sourceTree = "<group>"; };
 		ACE72BB72CB85D4D0025E019 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +54,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC0AFB8D2CB97EFC0052780F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC0AFB942CB982200052780F /* TaskItemModel.swift */,
+				AC0AFB9E2CB98F3E0052780F /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC0AFB8E2CB97F170052780F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACE72BC32CB86A900025E019 /* TaskItemView.swift */,
+				AC0AFB962CB98F040052780F /* LoginView.swift */,
+				AC0AFB982CB98F0D0052780F /* RegisterView.swift */,
+				ACE72BB72CB85D4D0025E019 /* ContentView.swift */,
+				AC0AFBA02CB99C1D0052780F /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC0AFB932CB980640052780F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AC0AFB8F2CB97F960052780F /* TaskItemViewViewModel.swift */,
+				AC0AFB9A2CB98F1F0052780F /* LoginViewViewModel.swift */,
+				AC0AFB9C2CB98F310052780F /* RegisterViewViewModel.swift */,
+				AC0AFB912CB97FA50052780F /* ContentViewViewModel.swift */,
+				AC0AFBA42CB99C440052780F /* ProfileViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		ACE72BA92CB85D4D0025E019 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				ACE72BB52CB85D4D0025E019 /* MySimpleToDoListApp.swift */,
-				ACE72BC32CB86A900025E019 /* TaskItemView.swift */,
-				ACE72BB72CB85D4D0025E019 /* ContentView.swift */,
+				AC0AFB932CB980640052780F /* ViewModels */,
+				AC0AFB8E2CB97F170052780F /* Views */,
+				AC0AFB8D2CB97EFC0052780F /* Model */,
 				ACE72BB92CB85D4F0025E019 /* Assets.xcassets */,
 				ACE72BBB2CB85D4F0025E019 /* Preview Content */,
 			);
@@ -140,9 +194,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0AFB9D2CB98F310052780F /* RegisterViewViewModel.swift in Sources */,
+				AC0AFB902CB97F970052780F /* TaskItemViewViewModel.swift in Sources */,
+				AC0AFB972CB98F040052780F /* LoginView.swift in Sources */,
+				AC0AFBA52CB99C440052780F /* ProfileViewViewModel.swift in Sources */,
 				ACE72BC42CB86A900025E019 /* TaskItemView.swift in Sources */,
+				AC0AFBA12CB99C1D0052780F /* ProfileView.swift in Sources */,
 				ACE72BB82CB85D4D0025E019 /* ContentView.swift in Sources */,
+				AC0AFB9B2CB98F1F0052780F /* LoginViewViewModel.swift in Sources */,
+				AC0AFB952CB982200052780F /* TaskItemModel.swift in Sources */,
+				AC0AFB992CB98F0D0052780F /* RegisterView.swift in Sources */,
 				ACE72BB62CB85D4D0025E019 /* MySimpleToDoListApp.swift in Sources */,
+				AC0AFB922CB97FA50052780F /* ContentViewViewModel.swift in Sources */,
+				AC0AFB9F2CB98F3E0052780F /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

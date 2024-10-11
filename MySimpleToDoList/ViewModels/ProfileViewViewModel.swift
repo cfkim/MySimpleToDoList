@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class ProfileViewViewModel: ObservableObject {
+    @Published var user:UserModel? = nil
+    init() {}
+    
+    func fetchUser() {
+        
+    }
+    
+    func logout() {
+        
+    }
+}

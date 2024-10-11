@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @StateObject var viewModel = ProfileViewViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            if let user = viewModel.user {
+                profile(user: user)
+                
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func profile(user: UserModel) -> some View {
+        Text(user.email)
+        
     }
 }
 

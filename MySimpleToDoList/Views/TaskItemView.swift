@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct TaskItemView: View {
+    @StateObject var viewModel = TaskItemViewViewModel()
+    
     var body: some View {
         HStack{
             Image(systemName: "square")
+                .onTapGesture {
+                    viewModel.toggle()
+                }
                 .padding()
             Text("Feed the cat")
             Spacer()
             Image(systemName: "trash")
+                .onTapGesture {
+                    viewModel.delete()
+                }
                 .foregroundColor(.red)
                 .padding()
         }

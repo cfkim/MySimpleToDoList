@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class LoginViewViewModel : ObservableObject {
+    @Published var email = ""
+    @Published var password = ""
+    @Published var error = ""
+    init() {}
+    
+    func login() {
+        print("login pressed")
+    }
+}

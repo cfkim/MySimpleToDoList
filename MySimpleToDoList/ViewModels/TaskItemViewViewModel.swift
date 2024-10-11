@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+class TaskItemViewViewModel: ObservableObject {
+    init() {}
+    
+    func toggle() {
+        // var itemCopy = item
+        // itemCopy.isComplete(!item.isComplete)
+        print("toggle")
+        // save the item copy
+    }
+    
+    func delete() {
+        print("delete")
+    }
+}

@@ -8,8 +8,32 @@
 import SwiftUI
 
 struct LoginView: View {
+    @StateObject var viewModel = LoginViewViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Login")
+            .bold()
+        VStack{
+            TextField("email", text: $viewModel.email)
+                .textFieldStyle(.roundedBorder)
+                
+            TextField("password", text: $viewModel.email)
+                .textFieldStyle(.roundedBorder)
+        }
+        .padding()
+        VStack{
+            Text("New here?")
+            NavigationLink("Create an account", destination: RegisterView())
+                .underline()
+                .bold()
+
+        }.padding()
+        
+        Button{
+            viewModel.login()
+        }label: {
+            Text("Login")
+        }
     }
 }
 
