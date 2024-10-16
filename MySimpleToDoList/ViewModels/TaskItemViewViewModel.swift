@@ -6,18 +6,34 @@
 //
 
 import Foundation
+import FirebaseAuth
+import FirebaseFirestore
 
 class TaskItemViewViewModel: ObservableObject {
     init() {}
     
-    func toggle() {
-        // var itemCopy = item
-        // itemCopy.isComplete(!item.isComplete)
+    func toggle(item: TaskItemModel) {
+        var itemCopy = item
+        itemCopy.setComplete(!item.isComplete)
         print("toggle")
         // save the item copy
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        let db = Firestore.firestore()
+        db.collection("users").document(uid).collection("todos").document(itemCopy.id).setData(itemCopy.asDictionary())
     }
     
-    func delete() {
+    func delete(item: TaskItemModel) {
         print("delete")
+        // save the item copy
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        let db = Firestore.firestore()
+        db.collection("users").document(uid).collection("todos").document(item.id).delete()
     }
+    
 }

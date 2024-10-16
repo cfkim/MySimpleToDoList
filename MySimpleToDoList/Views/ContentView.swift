@@ -6,25 +6,34 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct ContentView: View {
     @StateObject var viewModel = ContentViewViewModel()
+    var items: [TaskItemModel] = []
+
+    
+    init(userId: String) {
+        let db = Firestore.firestore()
+        db.collection("users/\(userId)/todos").addSnapshotListener { [weak self] (querySnapshot, error) in
+            
+            if let error = error {
+                            print("Error fetching documents: \(error)")
+                            return
+            }
+            self?.items = querySnapshot?.documents.compactMap { document in
+                            try? document.data(as: TaskItemModel.self)
+                        } ?? []
+        }
+    }
     
     var body: some View {
         NavigationView{
                 VStack (spacing: -50){
                     // Task
                     ZStack{
-                        List{
-                            TaskItemView()
-                                .listRowSeparator(.hidden)
-                            TaskItemView()
-                                .listRowSeparator(.hidden)
-                            TaskItemView()
-                                .listRowSeparator(.hidden)
-                            TaskItemView()
-                                .listRowSeparator(.hidden)
-                            TaskItemView()
+                        List(items) { item in
+                            TaskItemView(item: item)
                                 .listRowSeparator(.hidden)
                         }
                         .listRowSpacing(-8)
@@ -42,12 +51,13 @@ struct ContentView: View {
                             
                         Rectangle()
                             .fill(Color(red: 211 / 255, green: 254 / 255, blue: 202 / 255))
+                            .frame(height: 130)
                             
                     }
                     .onTapGesture {
                         viewModel.addTask()
                     }
-                    .offset(y: 50)
+                    .offset(y: 45)
                 }.navigationTitle("My To do List").toolbar {
                     Button {
                         print("show profile sheet")
@@ -61,5 +71,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(userId: "123")
 }

@@ -14,10 +14,14 @@ struct LoginView: View {
         Text("Login")
             .bold()
         VStack{
+            if !viewModel.errorMessage.isEmpty {
+                Text(viewModel.errorMessage).foregroundColor(.red)
+            }
+            
             TextField("email", text: $viewModel.email)
                 .textFieldStyle(.roundedBorder)
                 
-            TextField("password", text: $viewModel.email)
+            TextField("password", text: $viewModel.password)
                 .textFieldStyle(.roundedBorder)
         }
         .padding()
